@@ -1,0 +1,83 @@
+.staff-page
+  &.departments
+    width: 100%
+    .department
+      width: 100%
+      border: 1px solid rgba(0, 0, 0, 0.18)
+      padding: 0 20px
+      .title
+        width: 100%
+        display: flex
+        justify-content: space-between
+        font-size: 20px
+        font-weight: 700
+        color: $red
+        margin-bottom: 20px
+        margin-top: 20px
+        cursor: pointer
+        &:hover
+          color: $black
+          .circle
+            background-color: red
+            .arrow
+              fill: $white
+        .circle
+          width: 35px
+          height: 35px
+          border-radius: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+          transform: rotate(-90deg)
+          .arrow
+            width: 15px
+            fill: $grey
+      .list
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        height: 0
+        overflow: hidden
+        justify-content: space-between
+        .item
+          width: 100%
+          max-width: 315px
+          display: flex
+          justify-content: space-between
+          margin-bottom: 20px
+          +adaptive($mobile)
+            flex-direction: column
+          .box
+            &_img
+              .avatar
+                width: 170px
+                height: 170px
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                margin-right: 20px
+                +adaptive($mobile)
+                  margin-right: 0
+                  margin-bottom: 20px
+            &_text
+              width: 100%
+              max-width: calc(100% - 190px)
+              .name
+                font-size: 16px
+                color: $black
+                margin-bottom: 10px
+              .status
+                font-size: 12px
+                color: $grey
+                margin-bottom: 20px
+              .title
+                font-size: 12px
+                color: $black
+                margin-bottom: 5px
+              p
+                font-size: 12px
+                color: $grey
+                .email
+                  color: $red
+        &_show
+          height: auto

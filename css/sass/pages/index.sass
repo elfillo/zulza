@@ -1,0 +1,96 @@
+.index-page
+  &.slider
+    width: 100%
+    .item
+      width: 100%
+      height: 322px
+      display: flex
+      align-items: center
+      border-bottom: 2px solid $red
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      .content
+        width: 100%
+        max-width: 250px
+        margin-left: 50px
+        color: $white
+        .title
+          font-size: 30px
+          margin-bottom: 15px
+          font-weight: 700
+        .text
+          font-size: 15px
+          margin-bottom: 15px
+          +cutText(2)
+    .swiper-pagination-bullet-active
+      background: $white
+    .swiper_arrow
+      background-image: none
+      width: 35px
+      height: 35px
+      border-radius: 100%
+      background-color: $grey
+      display: flex
+      align-items: center
+      justify-content: center
+      &:hover
+        background-color: $red
+        svg
+          fill: $white
+      &--next
+        transform: rotate(180deg)
+      svg
+        width: 15px
+        fill: $black
+
+  &.icons
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +adaptive($mobile)
+      flex-wrap: wrap
+    .item
+      display: flex
+      align-items: center
+      +adaptive($mobile)
+        width: 50%
+        flex-direction: column
+        margin-bottom: 10px
+      .img
+        width: 40px
+        height: 40px
+        margin-right: 20px
+        +adaptive($mobile)
+          margin-right: 0
+      span
+        font-size: 13px
+        color: $grey
+        +adaptive($mobile)
+          text-align: center
+
+  &.about
+    width: 100%
+    display: flex
+    justify-content: space-between
+    .box
+      &_img
+        width: 230px
+        height: 230px
+        +adaptive($mobile)
+          display: none
+      &_text
+        width: calc(100% - 230px)
+        padding-left: 20px
+        +adaptive($mobile)
+          width: 100%
+          padding-left: 0
+        .title
+          width: 100%
+          font-size: 20px
+          font-weight: 700
+          margin-bottom: 20px
+        .text
+          font-size: 14px
+          margin-bottom: 20px

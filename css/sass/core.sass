@@ -1,0 +1,51 @@
+@import "parts/buttons"
+@import "parts/header"
+@import "parts/footer"
+@import "parts/side-bar"
+@import "parts/upstairs"
+@import "parts/modal"
+@import "pages/index"
+@import "pages/contact"
+@import "pages/job"
+@import "pages/staff"
+@import "pages/shop"
+
+body
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+.container
+  width: 100%
+  max-width: 1171px
+  margin: 0 auto
+  +adaptive($mobile)
+    padding: 0 10px
+  &--side-bar
+    display: flex
+    .content
+      width: calc(100% - 220px)
+      padding: 25px 0 0 25px
+      font-size: 15px
+      +adaptive($mobile)
+        padding: 0
+        padding-top: 10px
+      h1
+        margin-bottom: 30px
+      p
+        margin-bottom: 20px
+      ul
+        margin-bottom: 20px
+        li
+          list-style: disc
+          list-style-position: inside
+          margin-bottom: 10px
+      +adaptive($mobile)
+        width: 100%
+
+
+
+section
+  margin-bottom: 50px !important
+  +adaptive($mobile)
+    margin-bottom: 20px !important
