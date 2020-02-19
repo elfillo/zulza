@@ -16,6 +16,7 @@
 <?php require 'parts/views/upstairs.php'?>
 <?php require 'parts/views/form/callback.php'?>
 <?php require 'parts/views/form/shop.php'?>
+<?php require 'parts/views/catalog-mobile.php'?>
 <div class="container">
     <header class="header">
         <a href="/" class="logo">
@@ -42,6 +43,7 @@
     <nav class="nav nav_mobile">
         <div class="burger_wr"><div class="title">Меню</div><div class="burger"><span></span><span></span><span></span></div></div>
 		<?php wp_nav_menu(array('theme_location'=>'Mobile', 'menu_class' => 'mobile_menu hide_list') );?>
+	    <?php echo do_shortcode('[wcas-search-form]'); ?>
     </nav>
 </div>
 

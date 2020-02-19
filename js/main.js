@@ -141,6 +141,44 @@ $(document).ready(function () {
     });
 });
 
+//add catalog for menu (mobile)
+$(document).ready(function () {
+    let mobile_menu = $('.mobile_menu');
+
+    let catalog_link = `
+        <li class="open-modal_catalog"><a href="#">Каталог</a></li>
+    `;
+    $(mobile_menu).prepend(catalog_link);
+
+    $('.open-modal_catalog').click(function () {
+        console.log('hui');
+        $('.modal_catalog').css('display', 'flex');
+    });
+});
+
+//toggle filters (for mobile)
+$(document).ready(function () {
+    let filters = $('.filters .widget-area');
+
+    let open_filters = true;
+
+    $('.filters .filter_toggle').click(function () {
+        open_filters = !open_filters;
+        $(filters).toggleClass('toggle_filters');
+        if(open_filters){
+            $('.filters .filter_toggle span').text('Скрыть фильтры');
+            $('.filters .filter_toggle .arrow').css('transform', 'rotate(-45deg)');
+
+        }else{
+            $('.filters .filter_toggle span').text('Показать фильтры');
+            $('.filters .filter_toggle .arrow').css('transform', 'rotate(45deg)');
+        }
+
+    });
+
+});
+
+
 //footer for contact page
 /*$(document).ready(function () {
     if(window.location.pathname === '/kontakty/'){

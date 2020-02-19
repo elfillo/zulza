@@ -4,6 +4,8 @@
   &--loop
     display: flex
     flex-wrap: wrap
+    +adaptive($mobile)
+      justify-content: center
     li
       width: 175px
       margin: 0 5px 20px
@@ -20,6 +22,8 @@
         text-align: center
   &--single
     display: flex
+    +adaptive($mobile)
+      flex-direction: column
     .onsale
       display: none
     &-image
@@ -36,6 +40,8 @@
           flex: 0 0 100%
           height: 450px
           margin-right: 0
+          +adaptive($mobile)
+            height: auto
     &-content
       h1
         margin-bottom: 20px
@@ -51,9 +57,43 @@
       h2
         text-align: center
         margin-bottom: 20px
+.modal_catalog
+  .form
+    ul
+      li
+        font-size: 13px
+        margin-bottom: 5px
+        .sub-menu
+          padding-left: 15px
+          margin: 5px 0
+.filters
+  display: none
+  +adaptive($mobile)
+    display: block
+  .filter_toggle
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 15px
+    border: 1px solid #c7c7c7
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 700
+    .arrow
+      width: 20px
+      height: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      transform: rotate(-45deg)
+      transition: 0.3s
+      .arrow
+        width: 10px
 
-
-
+.toggle_filters
+  overflow: hidden
+  height: 0
 
 
 .page-numbers li
@@ -77,8 +117,10 @@
 .woocommerce-breadcrumb
   font-size: 18px
   font-weight: 700
-  //margin: 50px auto 20px
   margin-bottom: 50px
+  word-break: break-word
+  +adaptive($mobile)
+    margin: 15px 0
 
 .woocommerce-tabs > ul.tabs, .page-title, .woocommerce-result-count, .woocommerce-ordering
   display: none
