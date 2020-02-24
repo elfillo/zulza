@@ -375,7 +375,7 @@
           border-left: 2px solid #d40029; }
           .side-bar--list ul li:hover .sub_arrow {
             fill: #d40029; }
-          .side-bar--list ul li:hover .sub-menu {
+          .side-bar--list ul li:hover > .sub-menu {
             display: block;
             z-index: 102; }
         .side-bar--list ul li .sub_arrow {
@@ -387,7 +387,7 @@
           right: 10px; }
         .side-bar--list ul li .sub-menu {
           display: none;
-          width: 951px;
+          width: calc(951px / 3);
           min-height: 100%;
           background: #fff;
           position: absolute;
